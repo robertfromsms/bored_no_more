@@ -1,5 +1,5 @@
 const url = "http://localhost:3000/"
-const onlineUrl = "https://shielded-lowlands-50599.herokuapp.com"
+const onlineUrl = "https://shielded-lowlands-50599.herokuapp.com/"
 
 function genericGetFetch(urlAddition) {
 	return (fetch(onlineUrl + urlAddition)
