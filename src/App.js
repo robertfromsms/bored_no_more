@@ -8,6 +8,7 @@ import LoginForm from './components/LoginForm'
 import NewUserForm from './components/NewUserForm'
 import UserProfile from './components/UserProfile'
 import ChangePassword from './components/ChangePassword'
+import Activity from './components/Activity'
 
 import { Redirect } from 'react-router-dom'
 
@@ -25,6 +26,7 @@ function App() {
         <Route exact path='/' render={() =>  <Landing />} />
         <Route exact path='/profile' render={() => <UserProfile/>} />
         <Route exact path='/account' render={() => <ChangePassword />} />
+        <Route exact path='/activity' render={() => <Activity />} />
         <Route path='/' render={() => <Redirect to='/profile' />} />
       </Switch>
       :

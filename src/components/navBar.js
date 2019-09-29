@@ -33,6 +33,18 @@ export default class NavBar extends Component {
             Profile
       </Menu.Item>,
       <Menu.Item
+            name="Activity"
+            key="activity"
+            active={activeItem === "Activity"}
+            as={Link}
+            to='/activity'
+            onClick={
+              this.handleItemClick
+            }
+          >
+            Activity
+      </Menu.Item>,
+      <Menu.Item
             position='right'
             name="Logout"
             key="logout"

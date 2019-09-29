@@ -43,7 +43,6 @@ class ChangePassword extends React.Component {
     else if ( user.password === user.password_confirmation) {
       fetchFun.genericNonGetFetch("profile", userUpdateConfigObj)
       .then(data => {
-        console.log(data)
         if (data.jwt) {
           alert("Update successfully. Logging you out")
           localStorage.removeItem("jwt")

@@ -27,11 +27,8 @@ const ActivityInstanceCard = props => {
           </select>
         </div>
       </div>
-      <div className="extra content">
-      </div>
     </div>
-  );
+  )
+}
 
-};
-
-export default ActivityInstanceCard;
+export default ActivityInstanceCard
