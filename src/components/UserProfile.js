@@ -1,8 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Button, Card, Form, Grid, Header, Icon, Image, Message, Segment } from 'semantic-ui-react'
+import { Button, Card, Grid, Header, Image} from 'semantic-ui-react'
 
-import NewUserForm from './NewUserForm'
 import image from '../what.jpg'
 import ActivityInstanceCard from './ActivityInstanceCard'
 import fetchFun from '../services/ourBackend'
@@ -26,7 +25,7 @@ class UserProfile extends React.Component {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': "Bearer " + `${jwt}`
+        'Authorization': "Bearer " + jwt
       }
     }
 
@@ -67,7 +66,7 @@ class UserProfile extends React.Component {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': "Bearer " + `${jwt}`
+        'Authorization': "Bearer " + jwt
       },
       ...body
     }
@@ -123,7 +122,7 @@ class UserProfile extends React.Component {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': "Bearer " + `${jwt}`
+        'Authorization': "Bearer " + jwt
       },
       ...body
     }
@@ -144,7 +143,7 @@ class UserProfile extends React.Component {
   render() {
 
     let allActCardComponents = this.props.fetchedInfo.profileData ? this.props.fetchedInfo.profileData.user.activity_instances_with_activity.map((activityInstance) => 
-      <ActivityInstanceCard activityinstance={activityInstance} handleUpdate={this.handleUpdate} />
+      <ActivityInstanceCard key={activityInstance.id} activityinstance={activityInstance} handleUpdate={this.handleUpdate} />
     ) : []
     
     return (

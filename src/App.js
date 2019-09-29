@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom'
 
 import './App.css'
 import NavBar from './components/navBar'
@@ -9,8 +9,6 @@ import NewUserForm from './components/NewUserForm'
 import UserProfile from './components/UserProfile'
 import ChangePassword from './components/ChangePassword'
 import Activity from './components/Activity'
-
-import { Redirect } from 'react-router-dom'
 
 function App() {
 

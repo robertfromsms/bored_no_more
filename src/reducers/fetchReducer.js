@@ -29,6 +29,19 @@ export default (state = beforeFetched, action) => {
 		case 'FETCH_ACTIVITY_DETAIL_DATA': {
 			return {...state, activityDetailData: action.activityDetailData}
 		}
+		case 'UPDATE_COMMENTS_WITH_USERS': {
+			const new_comments_with_users = action.new_comments_with_users
+			let newState = {
+				...state,
+				activityDetailData: {
+					activity: {
+						...state.activityDetailData.activity,
+						comments_with_users: new_comments_with_users
+					}
+				}
+			}
+			return newState
+		}
 		default: {
 			return state
 		}

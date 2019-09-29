@@ -1,10 +1,7 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import { Button, Card, Form, Grid, Header, Image, Segment, Tab } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Segment} from 'semantic-ui-react'
 
 import fetchFun from '../services/ourBackend'
-import ResponsiveContainer from './ResponsiveContainer'
-import Loading from './Loading'
 
 // local state for submitting forms
 class ChangePassword extends React.Component {
